@@ -1,0 +1,63 @@
+# ==========================================================
+# .gitignore - Práctica Puesta en Producción Segura
+# ==========================================================
+
+# --- Construcción de artefactos --------------------------
+# Se regeneran a partir del código fuente
+dist/
+build/
+target/
+
+# --- Dependencias ----------------------------------------
+node_modules/
+# No aplica: no es un proyecto PHP ni Python
+# vendor/
+# .venv/
+# venv/
+
+# --- Archivos del sistema operativo ----------------------
+.DS_Store
+Thumbs.db
+
+# --- Configuración del IDE -------------------------------
+.vscode/
+.idea/
+.project
+.settings/
+
+# --- Registros y archivos temporales ---------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tmp
+*.bak
+*~
+# No aplica: no hay Python ni Jupyter
+# .mypy_cache/
+# __pycache__/
+# .ipynb_checkpoints/
+
+# --- Entorno y secretos (¡nunca subir!) ------------------
+.env
+.env.*
+# Excepción: la plantilla sin valores reales sí se versiona
+!.env.example
+secrets.json
+# No se ignora config.json porque podría ser configuración
+# necesaria del proyecto, no un secreto
+# config.json
+
+# --- Bases de datos y almacenamiento ---------------------
+# No aplica: el proyecto no usa SQLite ni Redis
+# *.sqlite
+# *.sqlite3
+# *.db
+# dump.rdb
+
+# --- CI/CD y cobertura -----------------------------------
+# No aplica todavía: aún no hay tests ni cobertura
+# coverage/
+# *.lcov
+# .tox/
+# .pytest_cache/
